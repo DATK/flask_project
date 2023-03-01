@@ -34,7 +34,7 @@ def cezar(text,alf,key):
 					#print("                          ",i,j)
 					cezar_shifr.append(alf[i+key])
 					continue
-	return cezar_shifr
+	return ''.join(cezar_shifr)
 
 def cezar_unsc(text,alf,key):
 	for j in range(len(text)):
@@ -62,10 +62,9 @@ def polibia_unsc(text,table):
 		polibia_un.append(table[c])
 	return polibia_un
 
-while cezar_shifr!=[] and cezar_un!=[] and polibia_shifr!=[] and polibia_un!=[]:
-	cezar_shifr,cezar_un,polibia_shifr,polibia_un=[],[],[],[]
+#while cezar_shifr!=[] and cezar_un!=[] and polibia_shifr!=[] and polibia_un!=[]:
+#	cezar_shifr,cezar_un,polibia_shifr,polibia_un=[],[],[],[]
 
-vrem=[]
 """
 while True:
 	q1=int(input("1-cezar; 2-polibia; 3-unsifr cezar; 4-unshifr poliba; 5-doubleshifr; 6-unshifr doubleshifr; 7 -quit: "))
