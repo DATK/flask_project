@@ -8,7 +8,7 @@ class Reg_or_chek_reg:
 
     def __init__(self, data="data.txt"):
         self.data = data
-        #with open(self.data, "w", encoding="UTF-8") as f:
+        # with open(self.data, "w", encoding="UTF-8") as f:
         #    f.write("{}")
 
     def chek_reg(self, key):
@@ -44,3 +44,10 @@ class Reg_or_chek_reg:
                 return False
         except KeyError:
             return False
+
+
+def read_html(file):
+    file = "./html/" + file
+    with open(file, "r", encoding="UTF-8") as f:
+        html = f.read()
+    return html

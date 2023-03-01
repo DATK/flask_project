@@ -1,36 +1,15 @@
-from src import site_1 as s, sh
+from src import site_1 as s
+from src import sh
 from flask import Flask, request, redirect
 
 c = s.Reg_or_chek_reg("data.txt")
-#c.clear_data()
+# c.clear_data()
 voshel = False
 result = 'None'
-html4 = """<form>
-</form>"""
-html3 = """<form action = "http://localhost:5000/vhod/move" method = "post">
-<p>Input move,text,key</p>
-<p><input type = "text" name = "move" /></p>
-<p><input type = "text" name = "text" /></p>
-<p><input type = "text" name = "key" /></p>
-<p><input type = "submit" value = "отправить" /></p>
-</form>"""
+html = s.read_html("html1.html")
+html2 = s.read_html("html2.html")
+html3 = s.read_html("hyml3.html")
 
-html = """
-<form action = "http://localhost:5000/reg" method = "post">
-<p>Enter Login and Password</p>
-<p><input type = "text" name = "username" /></p>
-<p><input type = "password" name = "password" /></p>
-<p><input type = "submit" value = "отправить" /></p>
-</form>
-"""
-html2 = """
-<form action = "http://localhost:5000/vhod" method = "post">
-<p>Enter Login and Password</p>
-<p><input type = "text" name = "username" /></p>
-<p><input type = "password" name = "password" /></p>
-<p><input type = "submit" value = "отправить" /></p>
-</form>
-"""
 app = Flask(__name__)
 
 
@@ -93,7 +72,6 @@ def shi():
             return redirect("/vhod")
     else:
         return html3
-
 
 
 @app.route('/vhod/move/res')
