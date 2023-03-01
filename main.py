@@ -1,5 +1,4 @@
-import site_1 as s
-import sh
+from src import site_1 as s, sh
 from flask import Flask, request, redirect
 
 c = s.Reg_or_chek_reg("data.txt")
