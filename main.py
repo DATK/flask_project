@@ -8,14 +8,16 @@ voshel = False
 result = 'None'
 html = s.read_html("html1.html")
 html2 = s.read_html("html2.html")
-html3 = s.read_html("hyml3.html")
-
+html3 = s.read_html("html3.html")
+html4=s.read_html("html4.html")
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=["GET", "POST"])
 def mainS():
-    return "hello world"
+   return html4
+
+
 
 
 @app.route('/reg', methods=["GET", "POST"])
